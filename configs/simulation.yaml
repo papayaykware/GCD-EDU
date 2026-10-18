@@ -1,0 +1,11 @@
+# Documented defaults mirrored by the CLI. The first prototype currently accepts
+# these parameters as CLI flags; YAML loading is planned for a later iteration.
+n_replicates: 200
+steps: 30
+delay_steps: 8
+seed: 20261015
+policies:
+  - random
+  - fixed_practice
+  - rule_based
+  - gcd_adaptive
