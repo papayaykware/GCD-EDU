@@ -1,0 +1,51 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gcd-edu"
+version = "0.1.0"
+description = "Experimental cognitive-state modelling and adaptive education simulation."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "CC-BY-NC-4.0"
+authors = [{ name = "GCD-EDU project contributors" }]
+keywords = ["education", "adaptive-learning", "simulation", "reproducibility", "cognitive-model"]
+classifiers = [
+  "Development Status :: 2 - Pre-Alpha",
+  "Intended Audience :: Science/Research",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Education",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+
+dependencies = [
+  "numpy>=1.24",
+  "pandas>=2.0",
+]
+
+[project.optional-dependencies]
+notebooks = ["jupyter>=1.0", "matplotlib>=3.7", "ipykernel>=6.25"]
+dev = ["pytest>=7.4", "matplotlib>=3.7", "jupyter>=1.0", "build>=1.0"]
+
+[project.scripts]
+gcd-edu-simulate = "gcd_edu.simulator:main"
+
+[project.urls]
+Homepage = "https://github.com/papayaykware/GCD-EDU"
+Repository = "https://github.com/papayaykware/GCD-EDU"
+Issues = "https://github.com/papayaykware/GCD-EDU/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 100
