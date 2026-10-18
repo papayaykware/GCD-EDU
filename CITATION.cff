@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you use this repository, please cite it using the metadata below and check the repository for the latest version."
+title: "GCD-EDU: General Cognitive Dynamics for Education"
+abstract: >-
+  Experimental architecture for adaptive education using explicit cognitive-state
+  estimates, a pedagogical decision engine, reproducible synthetic simulation,
+  and falsifiable evaluation criteria.
+type: software
+authors:
+  - family-names: "Ciborro"
+    given-names: "Javi"
+    affiliation: "Project maintainer and conceptual direction"
+    orcid: null
+  - name: "GPT (OpenAI)"
+    affiliation: "Declared AI-assisted conceptual contribution; not a legal person"
+version: 0.1.0
+date-released: 2026-10-15
+repository-code: "https://github.com/papayaykware/GCD-EDU"
+license: "CC-BY-NC-4.0"
+keywords:
+  - adaptive education
+  - cognitive state estimation
+  - synthetic learners
+  - reproducible simulation
+  - falsification
