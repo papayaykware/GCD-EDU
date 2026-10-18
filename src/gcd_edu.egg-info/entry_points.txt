@@ -1,0 +1,2 @@
+[console_scripts]
+gcd-edu-simulate = gcd_edu.simulator:main

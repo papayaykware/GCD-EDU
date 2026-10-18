@@ -1,0 +1,67 @@
+Metadata-Version: 2.4
+Name: gcd-edu
+Version: 0.1.0
+Summary: Experimental cognitive-state modelling and adaptive education simulation.
+Author: GCD-EDU project contributors
+License-Expression: CC-BY-NC-4.0
+Project-URL: Homepage, https://github.com/papayaykware/GCD-EDU
+Project-URL: Repository, https://github.com/papayaykware/GCD-EDU
+Project-URL: Issues, https://github.com/papayaykware/GCD-EDU/issues
+Keywords: education,adaptive-learning,simulation,reproducibility,cognitive-model
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Education
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: numpy>=1.24
+Requires-Dist: pandas>=2.0
+Provides-Extra: notebooks
+Requires-Dist: jupyter>=1.0; extra == "notebooks"
+Requires-Dist: matplotlib>=3.7; extra == "notebooks"
+Requires-Dist: ipykernel>=6.25; extra == "notebooks"
+Provides-Extra: dev
+Requires-Dist: pytest>=7.4; extra == "dev"
+Requires-Dist: matplotlib>=3.7; extra == "dev"
+Requires-Dist: jupyter>=1.0; extra == "dev"
+Requires-Dist: build>=1.0; extra == "dev"
+
+# GCD-EDU — starter implementation
+
+This directory contains the executable starter components for the GCD-EDU repository.
+
+**Canonical project README:** https://github.com/papayaykware/GCD-EDU
+
+The upstream repository already contains the main `README.md` and `License.md`.
+When integrating this package into that repository, preserve those existing files;
+this package README exists so that the Python package can be built and tested standalone.
+
+## Quick start
+
+```bash
+python -m venv .venv
+# Linux/macOS:
+source .venv/bin/activate
+# Windows PowerShell:
+# .venv\\Scripts\\Activate.ps1
+
+python -m pip install -e ".[dev]"
+python -m pytest
+python -m pip install -e ".[notebooks]"
+jupyter notebook notebooks/04_baseline_comparison.ipynb
+```
+
+Run a comparison from the repository root:
+
+```bash
+gcd-edu-simulate --replicates 200 --steps 30 --seed 20261015
+```
+
+The simulator uses synthetic learners only. Its results test code paths and demonstrate
+a simulation workflow; they do not establish real-world educational efficacy.
+See `docs/experimental_notes.md` for the assumptions and limitations.
